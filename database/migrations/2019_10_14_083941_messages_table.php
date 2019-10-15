@@ -21,6 +21,7 @@ class MessagesTable extends Migration
             $table->string('email');
             $table->string('subject');
             $table->text('content');
+            $table->boolean('optIn');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -5,6 +5,7 @@ use App\Mail\NewMessage;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MessageConfirmation;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use App\Message;
 class MessageController extends Controller
 {

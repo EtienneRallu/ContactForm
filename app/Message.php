@@ -16,6 +16,7 @@ class Message extends Model {
         'phoneNumber' => 'string|nullable',
         'subject'=>'required|string',
         'content' => 'required|string',
+        'optIn' =>'required|boolean'
     ];
 
     protected $hidden = [
@@ -46,7 +47,7 @@ class Message extends Model {
         $new->phoneNumber=  $inputs['phoneNumber'];
         $new->subject   =   $inputs['subject'];
         $new->content   =   $inputs['content'];
-
+        $new->optIn   =   $inputs['optIn'];
         $new->save();
 
         return $new;
