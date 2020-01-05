@@ -33,7 +33,7 @@ class NewMessage extends Mailable
      */
     public function build()
     {
-        return $this->from($this->message->email, 'Etienne Rallu')
+        return $this->from($this->message->email, $this->message->firstName . ' '. $this->message->lastName )
             ->subject($this->message->subject)
             ->view('NewMessage')->with([
                 'content' => $this->message->content,
